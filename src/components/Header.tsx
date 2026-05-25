@@ -72,12 +72,12 @@ export default function Header({ activeSection }: HeaderProps) {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-2.5 xl:gap-5">
+        <nav className="hidden xl:flex items-center gap-4 xl:gap-5">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-sans text-[10px] xl:text-xs font-extrabold uppercase tracking-wider transition-colors duration-200 hover:text-pink-600 relative py-1 cursor-pointer whitespace-nowrap ${
+              className={`font-sans text-xs font-extrabold uppercase tracking-wider transition-colors duration-200 hover:text-pink-600 relative py-1 cursor-pointer whitespace-nowrap ${
                 activeSection === item.id ? 'text-pink-600' : 'text-slate-700'
               }`}
             >
@@ -90,12 +90,12 @@ export default function Header({ activeSection }: HeaderProps) {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden md:block flex-shrink-0">
+        <div className="hidden md:block flex-shrink-0 pl-4">
           <button
             onClick={() => scrollToSection('scheduler')}
-            className="flex items-center gap-1.5 xl:gap-2 font-sans text-[10px] xl:text-xs font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 hover:opacity-95 text-white px-3.5 py-2.5 xl:px-5.5 xl:py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 active:scale-95 cursor-pointer whitespace-nowrap"
+            className="flex items-center gap-2 font-sans text-xs font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 hover:opacity-95 text-white px-5 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 active:scale-95 cursor-pointer whitespace-nowrap"
           >
-            <Calendar className="w-3 h-3 xl:w-3.5 xl:h-3.5 text-white" />
+            <Calendar className="w-3.5 h-3.5 text-white" />
             Book Advisory Briefing ☎️
           </button>
         </div>
@@ -103,7 +103,7 @@ export default function Header({ activeSection }: HeaderProps) {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-slate-700 hover:text-pink-600 transition-colors cursor-pointer"
+          className="xl:hidden p-2 text-slate-700 hover:text-pink-600 transition-colors cursor-pointer"
           aria-label="Toggle Menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -112,7 +112,7 @@ export default function Header({ activeSection }: HeaderProps) {
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white/95 border-b border-pink-100 absolute top-full left-0 right-0 py-6 px-6 shadow-2xl animate-fade-in backdrop-blur-xl">
+        <div className="xl:hidden bg-white/95 border-b border-pink-100 absolute top-full left-0 right-0 py-6 px-6 shadow-2xl animate-fade-in backdrop-blur-xl">
           <div className="flex flex-col gap-3">
             {navItems.map((item) => (
               <button
