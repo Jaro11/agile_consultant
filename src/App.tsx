@@ -51,6 +51,10 @@ import {
   QUIZ_QUESTIONS 
 } from './data';
 
+import magicUnicorn from './assets/images/magic_unicorn_agile_1779727888073.png';
+import corporateRainbowPath from './assets/images/corporate_rainbow_path_1779727924910.png';
+import jaroPlushUnicorn from './assets/images/jaro_plush_unicorn_1779729957540.png';
+
 export default function App() {
   const [activeSection, setActiveSection] = useState('home');
   
@@ -522,7 +526,7 @@ export default function App() {
                 {/* Hero Asset image overlay with elegant text bubble */}
                 <div className="relative aspect-video rounded-xl overflow-hidden group border border-pink-500/20 shadow-inner z-10">
                   <img
-                    src="/src/assets/images/magic_unicorn_agile_1779727888073.png"
+                    src={magicUnicorn}
                     alt="Whimsical cyber agile unicorn leaping over digital rainbow cloud"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
@@ -2165,7 +2169,7 @@ export default function App() {
                 <span className="font-mono text-[9px] text-pink-600 font-extrabold block mb-2 uppercase">🌈 OUR ROADMAP METAPHOR:</span>
                 <div className="rounded-xl overflow-hidden aspect-video border border-pink-100">
                   <img 
-                    src="/src/assets/images/corporate_rainbow_path_1779727924910.png" 
+                    src={corporateRainbowPath} 
                     alt="Corporate Rainbow road heading into cloud agility" 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     referrerPolicy="no-referrer"
@@ -2351,7 +2355,7 @@ export default function App() {
               {/* Mascot Image with border and blanket/star matching background */}
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border-4 border-pink-200 shadow-lg relative bg-pink-50 flex-shrink-0">
                 <img
-                  src="/src/assets/images/jaro_plush_unicorn_1779729957540.png"
+                  src={jaroPlushUnicorn}
                   alt="Jaro's Real Life Agile Mascot"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   referrerPolicy="no-referrer"
@@ -2422,208 +2426,44 @@ export default function App() {
 
             <div className="absolute top-0 right-0 w-32 h-32 bg-pink-500/10 rounded-full blur-[80px]" />
 
-            {!isBooked ? (
-              <form onSubmit={handleBookSession} className="p-6 md:p-10 flex flex-col gap-6 text-left relative z-10 bg-white/80 rounded-2xl border border-pink-200">
-                
-                {/* Advisor Selector row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-2">
-                  <div className="flex flex-col gap-2">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider animate-pulse">
-                      Select Primary Advisor:
-                    </label>
-                    <select
-                      value={advisorId}
-                      onChange={(e) => setAdvisorId(e.target.value)}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none font-sans text-xs uppercase tracking-wide cursor-pointer font-semibold shadow-xs"
-                    >
-                      <option value="jaro-sidor">Jaro Sidor (Primary AI Product & Unicorn Coach)</option>
-                      <option value="elena-scrum">Dr. Elena Rostova (VP, Cloud Engineering & Rainbow Pathways)</option>
-                    </select>
-                  </div>
-
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider animate-pulse">
-                      Target Audit Focus Area:
-                    </label>
-                    <select
-                      value={focusArea}
-                      onChange={(e) => setFocusArea(e.target.value)}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none font-sans text-xs uppercase tracking-wide cursor-pointer font-semibold shadow-xs"
-                    >
-                      <option value="Enterprise Scaling & Redundancies">Enterprise Scaling & Redundancy App</option>
-                      <option value="Squad Velocity Optimization">Squad Velocity Optimization</option>
-                      <option value="Management OKR Alignment">Management OKR Alignment</option>
-                      <option value="Backlog Grooming and story splitting">Backlog Slicing Audit</option>
-                      <option value="DevOps CI/CD Automation Streamlining">DevOps Deployment Automation</option>
-                    </select>
+            {/* Embedded Tally.so Contact Form */}
+            <div className="relative z-10 bg-white/95 rounded-2xl border border-pink-200 overflow-hidden shadow-xl p-3 sm:p-5 flex flex-col gap-4">
+              <div className="flex flex-col sm:flex-row items-center justify-between border-b border-pink-100 pb-3 gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="text-lg">🦄</span>
+                  <div className="text-left">
+                    <h4 className="font-sans font-bold text-slate-800 text-sm">Direct Advisor Intake Portal</h4>
+                    <p className="font-mono text-[9px] text-slate-500 uppercase font-semibold">Tally-Verified Secure Connection</p>
                   </div>
                 </div>
-
-                {/* Calendar Date / Time row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-2">
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Choose Available Date:
-                    </label>
-                    <input
-                      type="date"
-                      value={date}
-                      onChange={(e) => setDate(e.target.value)}
-                      className="bg-white border border-pink-205 border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none uppercase font-mono tracking-widest shadow-xs"
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Target Advisory Time:
-                    </label>
-                    <select
-                      value={time}
-                      onChange={(e) => setTime(e.target.value)}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none font-sans text-xs font-semibold hover:border-pink-300 shadow-xs"
-                    >
-                      <option value="09:00 AM">09:00 AM (Central European Standard)</option>
-                      <option value="10:00 AM">10:00 AM</option>
-                      <option value="11:30 AM">11:30 AM</option>
-                      <option value="02:00 PM">02:00 PM</option>
-                      <option value="04:00 PM">04:00 PM</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Name / Email row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-2">
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Full Client Name:
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. CEO / Lead Engineer"
-                      value={clientInfo.name}
-                      onChange={(e) => setClientInfo({ ...clientInfo, name: e.target.value })}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none shadow-xs shadow-inner"
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Corporate Work Email:
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="you@company.com"
-                      value={clientInfo.email}
-                      onChange={(e) => setClientInfo({ ...clientInfo, email: e.target.value })}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none shadow-xs shadow-inner"
-                    />
-                  </div>
-                </div>
-
-                {/* Company Name / Title row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-2">
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Company / Organization name:
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="Venture Capital plc / Tech LLC"
-                      value={clientInfo.company}
-                      onChange={(e) => setClientInfo({...clientInfo, company: e.target.value})}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none shadow-xs shadow-inner"
-                    />
-                  </div>
-
-                  <div className="flex flex-col gap-2 font-sans text-xs">
-                    <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                      Your Corporate Role:
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Lead Product Owner / VP Infrastructure"
-                      value={clientInfo.role}
-                      onChange={(e) => setClientInfo({...clientInfo, role: e.target.value})}
-                      className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3 text-slate-800 outline-none shadow-xs shadow-inner"
-                    />
-                  </div>
-                </div>
-
-                {/* Notes box */}
-                <div className="flex flex-col gap-2 font-sans text-xs">
-                  <label className="font-mono text-[10px] text-pink-600 uppercase font-black tracking-wider">
-                    Roadblock description & Background Notes:
-                  </label>
-                  <textarea
-                    rows={4}
-                    placeholder="Briefly detail what are your top agile bottlenecks (e.g. Standup fatigue, QA lag, Story Point arguments...)"
-                    value={clientInfo.notes}
-                    onChange={(e) => setClientInfo({ ...clientInfo, notes: e.target.value })}
-                    className="bg-white border border-pink-200 focus:border-pink-400 rounded-lg p-3.5 text-slate-800 outline-none resize-none leading-relaxed shadow-xs shadow-inner"
-                  />
-                </div>
-
-                {/* Submit button */}
-                <button
-                  type="submit"
-                  className="py-4 bg-gradient-to-r from-pink-500 via-yellow-500 to-indigo-600 hover:opacity-95 text-white font-sans font-black uppercase tracking-widest text-xs rounded-xl shadow-xl shadow-pink-500/15 cursor-pointer text-center relative z-10"
+                <a
+                  href="https://tally.so/r/7Rpjj6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-[10px] text-pink-600 hover:text-pink-700 font-extrabold uppercase tracking-widest bg-pink-50 hover:bg-pink-100/80 transition-all border border-pink-200 px-3 py-1.5 rounded-lg flex items-center gap-1.5 shadow-3xs"
                 >
-                  Generate Strategic Invitation & Secure Booking coordinates 🦄
-                </button>
-
-              </form>
-            ) : (
-              // BOOKED CONFIRMATION CARD SUCCESS SCREEN
-              <div className="p-8 md:p-12 text-center flex flex-col items-center gap-6 animate-fade-in relative z-10 animate-unicorn bg-white/95 rounded-2xl border border-pink-200 shadow-xl">
-                
-                <div className="p-4 bg-pink-50 border-2 border-pink-300 text-pink-600 rounded-full w-fit">
-                  <CheckCircle className="w-10 h-10 text-pink-600 stroke-[1.5] animate-scale-up" />
-                </div>
-
-                <div className="flex flex-col gap-1.5 max-w-lg">
-                  <span className="font-mono text-[10px] tracking-widest text-pink-600 block font-black uppercase">
-                    🦄 Maturity transformation brief is registered
-                  </span>
-                  <h3 className="font-sans font-black text-2xl sm:text-3xl text-slate-900">
-                    Agile Strategy Booking Verified! 🌈
-                  </h3>
-                  <p className="font-sans text-xs sm:text-sm text-slate-705 text-slate-700 leading-relaxed mt-2 p-4 bg-pink-50/40 border border-pink-200 rounded-xl font-semibold shadow-xs">
-                    Congratulations **{clientInfo.name}**, you have locked in your strategy audit regarding **"{focusArea}"** with **{
-                      advisorId === 'jaro-sidor' ? 'Jaro Sidor' : 'Dr. Elena Rostova'
-                    }** for **{date}** at **{time}**.
-                  </p>
-                </div>
-
-                <div className="w-full max-w-md border border-pink-205 border-pink-200 p-4.5 rounded-xl bg-pink-50/20 text-left font-mono text-[11px] text-slate-600 flex flex-col gap-1.5 shadow-inner">
-                  <div className="flex justify-between">
-                    <span>REGISTRY CLIENT:</span>
-                    <span className="text-slate-800 font-sans font-extrabold">{clientInfo.name} ({clientInfo.company})</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>VERIFICATION CODE:</span>
-                    <span className="text-pink-600 font-black">JARO-FLOW-{Math.floor(Math.random() * 9000 + 1000)}</span>
-                  </div>
-                  <div className="flex justify-between border-t border-pink-100 pt-1.5 mt-1.5">
-                    <span>COORDINATES SETUP:</span>
-                    <span className="text-pink-600 font-black">🌈 SECURE GOOGLE MEET LINK INBOXED</span>
-                  </div>
-                </div>
-
-                <button
-                  onClick={() => {
-                    setIsBooked(false);
-                    setClientInfo({ name: '', email: '', company: '', role: '', notes: '' });
-                  }}
-                  className="font-mono text-xs text-pink-600 hover:text-pink-800 transition-colors cursor-pointer py-1 block uppercase font-black"
-                >
-                  Schedule Another Diagnostic Briefing
-                </button>
-
+                  <span>Open Form in New Tab ↗</span>
+                </a>
               </div>
-            )}
+              
+              <div className="w-full relative h-[650px] bg-slate-50 rounded-xl overflow-hidden border border-pink-100">
+                <iframe
+                  src="https://tally.so/r/7Rpjj6?transparentBackground=1"
+                  width="100%"
+                  height="100%"
+                  frameBorder="0"
+                  marginHeight={0}
+                  marginWidth={0}
+                  title="Contact Jaro Sidor Consulting"
+                  className="absolute inset-0 w-full h-full rounded-xl bg-transparent"
+                  referrerPolicy="no-referrer"
+                ></iframe>
+              </div>
+              
+              <div className="text-center font-mono text-[9px] text-slate-400 uppercase tracking-widest leading-none pt-1">
+                🔒 Protected by end-to-end Tally Secure Encryption
+              </div>
+            </div>
 
           </div>
 

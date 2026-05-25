@@ -1,4 +1,5 @@
 import { Service, CaseStudy, TeamMember } from './types';
+import jaroProfile from './assets/images/pexels-karola-g-4887163 (1).jpg';
 
 export const SERVICES: Service[] = [
   {
@@ -107,8 +108,8 @@ export const TEAM: TeamMember[] = [
     id: 'jaro-sidor',
     name: 'Jaro Sidor',
     role: 'Lead AI Product & Unicorn Agile Advisor 🦄',
-    photo: '/src/assets/images/jaro_plush_unicorn_1779729957540.png',
-    bio: 'Jaro Sidor is a magical Agile Coach & Rapid AI builder who blows away sprint delays using golden rainbow dust pipelines. (Pictured here in his final, pure-unicorn agile advisor form during a high-velocity sprint session).',
+    photo: jaroProfile,
+    bio: 'Jaro Sidor is a magical Agile Coach & Rapid AI builder who blows away sprint delays using golden rainbow dust pipelines to maximize sprint flow and team collaboration.',
     specialties: ['AI Prototyping & Gemini LLMs 🦄', 'Kanban/Scrum & Delivery Ops ☁️', 'MVP Roadmaps & Rainbow Slices 🌈'],
     experience: 10,
     almaMater: 'Certified PMP & PSM • jaro11.github.io'
