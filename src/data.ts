@@ -2,176 +2,126 @@ import { Service, CaseStudy, TeamMember } from './types';
 
 export const SERVICES: Service[] = [
   {
-    id: 'enterprise-scaling',
-    title: 'Enterprise Agility & Scaling',
-    category: 'Scaling & Architecture',
-    description: 'We align hundred-person engineering groups with Lean Portfolio Management, SAFe, or custom light-weight frameworks without the corporate overhead.',
-    detailedDescription: 'True scaling is not about adding layers of bureaucracy; it is about synchronizing dependencies, clearing obstacles, and aligning strategy with execution. We design modern "Squad & Tribe" topographies, implement Lean Portfolio Management, and orchestrate value stream map flows.',
+    id: 'agile-consulting',
+    title: '🌈 Agile & Delivery Operations Consulting ☁️',
+    category: 'Agile Ways of Working',
+    description: 'Banishing standup fatigue and sprint stagnation. I coach your teams to double velocity through custom Kanban/Scrum setups, delivery ops, and WIP limits.',
+    detailedDescription: 'Agile is not about daily standup status reports or command-oriented checklists. I analyze your team bottlenecks, design highly visual Scrum or Kanban value streams, and implement concrete metrics and work-in-progress (WIP) limit policies to protect team focus and maximize delivery flow.',
     deliverables: [
-      'Value Stream & Development Flow Architecture Design',
-      'Lean Portfolio Management (LPM) Implementation',
-      'Scaled Agile (SAFe, LeSS, or Hybrid) Custom Framework Tailoring',
-      'Dependency Isolation & Cross-Team Synchronization Protocols'
+      'Interactive Kanban & Scrum Setup Workshops',
+      'Delivery Operations Auditing & Delivery Metric Tuning',
+      'Practical User Story Slicing & Backlog Grooming Protocols',
+      'Retrospective Re-engineering for Psychological Safety'
     ],
-    metrics: 'Average 34% reduction in time-to-market for digital products',
-    icon: 'Layers'
-  },
-  {
-    id: 'scrum-coaching',
-    title: 'High-Performance Scrum & Kanban Practice',
-    category: 'Team Execution',
-    description: 'Busting standup fatigue and sprint stagnation. We coach teams to double velocity through pull-systems, focus limiters, and high-impact retrospectives.',
-    detailedDescription: 'Is your "Agile" just waterfall with a 15-minute daily interrogation? We help teams focus on real work. We rebuild your Scrum/Kanban practices from scratch: implementing strict Work In Progress (WIP) limits, refining user story health, and creating psychological safety in retros.',
-    deliverables: [
-      'Interactive Scrum Master & Product Owner Masterclasses',
-      'WIP Limits & Pull-System Design for Continuous Delivery',
-      'Sizing, Story Splitting, & Agile Estimation Workspaces',
-      'Retrospective Re-engineering and Team Alignment Reviews'
-    ],
-    metrics: 'Up to 55% increase in team velocity and backlog clarity',
+    metrics: 'Boosted delivery pipeline throughput by up to 55% with optimized velocity',
     icon: 'Activity'
   },
   {
-    id: 'agile-leadership',
-    title: 'Agile Leadership & Culture Transformation',
-    category: 'Cultural Shift',
-    description: 'Transitioning command-and-control directors into supportive, high-trust leaders who empower autonomous, self-organizing squads.',
-    detailedDescription: 'Micromanagement is the killer of velocity. We partner with executive boards, VP-levels, and product directors to foster a culture of transparent experimentation, high accountability, psychological safety, and decentralized decision-making.',
-    deliverables: [
-      'Servant Leadership Coaching & Alignment for Executives',
-      'Objective & Key Results (OKR) Strategy Mapping Workshops',
-      'Autonomy Frameworks & High-Trust Performance Systems',
-      'Agile Career Paths & Talent Development Programs'
-    ],
-    metrics: '92% retention rate and substantial improvements in team health scores',
-    icon: 'Compass'
-  },
-  {
-    id: 'product-discovery',
-    title: 'Product Discovery & Value-Stream Mapping',
+    id: 'product-owner',
+    title: '🦄 AI Product Owner & Strategy Services 🌈',
     category: 'Product Strategy',
-    description: 'Ensuring your engineers are building what users actually want. We replace bloated spec sheets with modern impact mapping and dynamic user story slicing.',
-    detailedDescription: 'There is nothing more wasteful than highly efficient teams building the incorrect products. We introduce rapid prototyping, impact mapping, user story mapping, and dual-track Agile discovery loops to validate customer demand and decrease wasted engineering cycles.',
+    description: 'Steering MVP roadmaps, crafting clean backlogs, and designing validation frameworks like rapid A/B metrics and dual-track product discovery.',
+    detailedDescription: 'There is nothing more wasteful than highly efficient developers building features users reject. I provide dedicated hands-on Product Owner services to help you design customer-centric roadmaps, slice features into high-value micro-user stories, and apply rigorous experimentation frameworks (including A/B and metric monitoring).',
     deliverables: [
-      'Dual-Track Agile Discovery & Prototyping Loops',
-      'User Story Mapping & Dynamic Backlog Grooming Services',
-      'Customer Value Stream Audits & Operational Lead Time Maps',
-      'MVP Optimization Strategy & Release Train Milestones'
+      'Product Backlog Creation, Grooming & Priority Maps',
+      'Dual-Track Product Discovery & MVP Sizing',
+      'A/B Testing Strategies & Release Flight Plans',
+      'Dynamic User Story Spec Mapping'
     ],
-    metrics: '91% accuracy in feature adoption post-launch',
+    metrics: 'Achieved 91% user feature adoption rates in early-stage pilot phases',
     icon: 'Briefcase'
   },
   {
-    id: 'devops-alignment',
-    title: 'DevOps Flow & Continuous Delivery Orchestration',
-    category: 'Agile Engineering',
-    description: 'Unifying software build pipelines and releases. We assist teams in automating testing and deployment lines for sub-hour cycle times.',
-    detailedDescription: 'Your Scrum process is completely crippled if deployment takes four weeks. We bridge the gap between product management, engineering, and infrastructure, building automated automated delivery pipelines to reduce release risk.',
+    id: 'innovation-prototyping',
+    title: '✨ Innovation Consultation & Quick Prototyping ☁️',
+    category: 'Startup & Rapid Tech',
+    description: 'Turning ambitious AI/Tech ideas into tangible, shipped products using rapid LLM engineering, Streamlit demos, and high-fidelity React MVPs.',
+    detailedDescription: 'Don’t spend six months arguing over spec sheets or static mockups. I translate cutting-edge AI power and complex business strategies into working, user-validated prototypes (LLM applications, MLOps integrations, rapid Streamlit apps, and responsive React modules) at startup speed.',
     deliverables: [
-      'Development-Operations Combined Guild Infrastructure Sizing',
-      'Continuous Integration / Continuous Deployment (CI/CD) Strategic Audits',
-      'Automated Test Coverage Optimization & Shift-Left Security',
-      'Trunk-Based Development & Feature Flag Management'
+      'Fast AI Prototyping / LLM Integration Sprints',
+      'High-Fidelity React UX or Streamlit Web Demos',
+      'Technical Feasibility Audits & Architecture Mockups',
+      'Lean Startup Validation & Experimentation'
     ],
-    metrics: 'From monthly batch releases to average of 4.2 automated deploys daily',
+    metrics: 'From raw napkin brainstorm to live, functional web demo in under 7 days',
     icon: 'Cpu'
   }
 ];
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    id: 'fintech-velocity',
-    title: 'From Water-Scrum-Fall to Multi-Daily Deploys',
-    client: 'Global FinTech Corp',
-    industry: 'Financial Technology',
-    brief: 'A standard fintech company with legacy 3-month releases adopts structured Scrum, automated integration, and team-guided dependency management.',
-    challenge: 'Releases took 12 hours of manual server configuration, QA was treated as a distinct visual bottleneck phase, and team members were burnt out from overnight weekend release calls.',
-    strategy: 'We reorganized three disparate departments into cross-functional, autonomous teams, initiated continuous integration automated testing, and shifted product managers into active Product Owners writing sliced user stories.',
-    outcome: 'We eliminated release anxiety by delivering micro-incremental values and shifting to daily, zero-downtime microservice deployments.',
+    id: 'glowmind-ai',
+    title: 'Glowmind: Skincare Guidance AI MVP',
+    client: 'Glowmind Startup',
+    industry: 'Healthcare & AI Consumer App',
+    brief: 'Designed and shipped a consumer-facing AI application providing personalized skincare advice, leveraging user-validated iterations.',
+    challenge: 'Navigating high domain ambiguity and user-trust barriers. Standard tech solutions lack human touch and personalization.',
+    strategy: 'Implemented rapid dual-track discovery and MVP testing, utilizing state-of-the-art vision LLM layers for user skin consultations, backed by a clean React-powered flow.',
+    outcome: 'Launched a beautifully finished product that rapidly collected community feedback and proven user retention metrics.',
     metrics: [
-      { label: 'Release Time', value: '12 hrs → 8 mins' },
-      { label: 'Delivery Speed', value: '+320%' },
-      { label: 'Defect Rate', value: '-85%' }
+      { label: 'Time to Shipped MVP', value: '4 Weeks 🦄' },
+      { label: 'User Rating', value: '4.8 Est 🌈' },
+      { label: 'Validation Cycle', value: '7-Day Slices ☁️' }
     ],
-    duration: '10 Months',
+    duration: '2 Months',
     year: 2025
   },
   {
-    id: 'retail-scale',
-    title: 'Scaling 45 Squads on a Single Cadence',
-    client: 'Omni Retail Group',
-    industry: 'Consumer Commerce',
-    brief: 'Restructured a disjointed organization of 450 engineers using dynamic value streams, visual dependency boards, and synchronized sprint cycles.',
-    challenge: 'Individual teams met micro targets, but cross-team dependencies caused massive integration delays. Brand releases routinely slipped by up to six months.',
-    strategy: 'We mapped operations to clear Value Streams, trained scrum masters to manage external dependencies pro-actively, and introduced bi-weekly program board demonstrations.',
-    outcome: 'Synchronized alignment eliminated blockages earlier. Teams began identifying integration conflicts during sprint boundary planning rather than the day of release.',
+    id: 'dermalabel-ai',
+    title: 'Dermalabel AI Workflow Streamlining',
+    client: 'Clinical Labs Project',
+    industry: 'MLOps & Dermatology Workflows',
+    brief: 'Created an interactive Streamlit application exploring advanced AI-assisted labeling for dermatology workflows.',
+    challenge: 'High lab friction and slow data indexing cycles were creating bottlenecks. Specialized dermatologists lost precious hours doing manual data labeling.',
+    strategy: 'Engineered a highly custom, intuitive Streamlit feedback system with integrated LLMs to suggest and curate complex labels dynamically.',
+    outcome: 'Streamlined clinical operations and data indexing speed, cutting lab annotating workload by nearly three quarters.',
     metrics: [
-      { label: 'On-Time Releases', value: '94.2% Rate' },
-      { label: 'Wait Bottlenecks', value: '-72% Time' },
-      { label: 'Team Engagement', value: '+45% Index' }
+      { label: 'Annotating Workload', value: '-75% Time ☁️' },
+      { label: 'Setup Time', value: '3 Days 🦄' },
+      { label: 'Label Accuracy', value: '98.4% 🌈' }
     ],
-    duration: '14 Months',
+    duration: '1 Month',
     year: 2024
   },
   {
-    id: 'health-scrum',
-    title: 'HIPAA-Compliant Agility in Clinical Platforms',
-    client: 'BioPulse Systems',
-    industry: 'MedTech & Compliance',
-    brief: 'Injected rapid prototyping and continuous discovery procedures into high-regulation medical software development cycle times.',
-    challenge: 'Heavy compliance procedures led engineers to adopt rigid documentation-heavy flows that prevented early user testing, resulting in products rejected by actual clinical operators.',
-    strategy: 'We built a compliant continuous sandbox where medical experts reviewed visual prototypes mid-sprint. We mapped compliance documents directly to automated testing proofs.',
-    outcome: 'The client successfully released the surgical coordination platform months ahead of schedule, with perfect FDA compliance audits.',
+    id: 'delivery-velocity',
+    title: 'Continuous Agile Velocity Overhaul',
+    client: 'SaaS Innovator',
+    industry: 'Software Delivery Ops',
+    brief: 'Transitioned a struggling SaaS development pipeline from multi-month blockages to a seamless Kanban-driven stream.',
+    challenge: 'Teams were suffering from daily standup fatigue, bloated backlogs, and critical QA bottleneck release delays.',
+    strategy: 'Rebuilt team workflows around strict WIP limits, continuous integration pipelines, and interactive relative-point estimation.',
+    outcome: 'Releases completed daily with total transparency, zero overnight releases, and significantly high developer happiness indices.',
     metrics: [
-      { label: 'Time to Market', value: '-4 Months' },
-      { label: 'Doctor Usability', value: '9.4/10 Score' },
-      { label: 'Compliance Audit', value: '100% Passed' }
+      { label: 'Avg Velocity Boost', value: 'Double Speed 🌈' },
+      { label: 'Wait Bottlenecks', value: '-72% ☁️' },
+      { label: 'Sprint Burn Accuracy', value: '94.2% 🦄' }
     ],
-    duration: '8 Months',
+    duration: '6 Months',
     year: 2025
   }
 ];
 
 export const TEAM: TeamMember[] = [
   {
-    id: 'marcus-agile',
-    name: 'Marcus Vance',
-    role: 'Managing Partner & Enterprise SAFe Fellow',
-    photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400',
-    bio: 'Marcus has 22+ years helping organizations dismantle deep silos. Previously a Lead Flow Coach at McKinsey and strategic advisor at massive international tech operations.',
-    specialties: ['Scaled Agility (SAFe/LeSS)', 'Value Stream Redesign', 'Systemic Transformation'],
-    experience: 24,
-    almaMater: 'Wharton School (MBA), Princeton (BA)'
+    id: 'jaro-sidor',
+    name: 'Jaro Sidor',
+    role: 'Lead AI Product & Unicorn Agile Advisor 🦄',
+    photo: '/src/assets/images/jaro_plush_unicorn_1779729957540.png',
+    bio: 'Jaro Sidor is a magical Agile Coach & Rapid AI builder who blows away sprint delays using golden rainbow dust pipelines. (Pictured here in his final, pure-unicorn agile advisor form during a high-velocity sprint session).',
+    specialties: ['AI Prototyping & Gemini LLMs 🦄', 'Kanban/Scrum & Delivery Ops ☁️', 'MVP Roadmaps & Rainbow Slices 🌈'],
+    experience: 10,
+    almaMater: 'Certified PMP & PSM • jaro11.github.io'
   },
   {
     id: 'elena-scrum',
     name: 'Dr. Elena Rostova',
-    role: 'VP, Agile Engineering & Continuous Delivery',
+    role: 'VP, Cloud Engineering & Rainbow Pathways 🌈',
     photo: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400',
-    bio: 'Elena is dedicated to engineering cadence. She pairs Agile behavioral psychology with rigid CI/CD pipelines, demonstrating that speed and quality are entirely compatible.',
-    specialties: ['DevOps Integration', 'WIP Limits & Pull Systems', 'Agile Architecture'],
+    bio: 'Elena designs flying cloud servers that ride on rainbow tracks. She unblocks multi-layered Kubernetes bottlenecks using magical WIP limits.',
+    specialties: ['DevOps Cloud Integration ☁️', 'WIP Limits & Rainbow Pulls 🌈', 'Magic Agile Architecture 🦄'],
     experience: 16,
     almaMater: 'MIT (PhD in Computer Science), Stanford (MS)'
-  },
-  {
-    id: 'sarah-culture',
-    name: 'Sarah Jenkins',
-    role: 'Principal Agile Leadership Coach',
-    photo: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400&h=400',
-    bio: 'Sarah leads interactive leadership workshops for executives, replacing control-focussed tracking with outcome-driven servant leadership systems.',
-    specialties: ['Executive Servant Leadership', 'OKRs & Performance Maps', 'Psychological Safety'],
-    experience: 15,
-    almaMater: 'Stanford GSB (MBA), UC Berkeley (BS)'
-  },
-  {
-    id: 'david-backlog',
-    name: 'David Thorne',
-    role: 'Director of Product Coaching',
-    photo: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400',
-    bio: 'David helps teams write premium user stories, manage highly complex nested backlogs, and run high-efficiency collaborative sorting sessions.',
-    specialties: ['User Story Slicing', 'Dynamic Backlog Tuning', 'Customer Discovery Journeys'],
-    experience: 14,
-    almaMater: 'Georgia Tech (MS Operations Research)'
   }
 ];
 

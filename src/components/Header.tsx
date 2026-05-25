@@ -36,6 +36,7 @@ export default function Header({ activeSection }: HeaderProps) {
 
   const navItems = [
     { label: 'Solutions', id: 'services' },
+    { label: 'AI Speed Builder', id: 'ai-speed-builder' },
     { label: 'Agility Assessor', id: 'assessor' },
     { label: 'Meme Corner', id: 'agile-memes' },
     { label: 'Translator & Bingo', id: 'interactive-fun' },
@@ -47,7 +48,7 @@ export default function Header({ activeSection }: HeaderProps) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-slate-950/90 backdrop-blur-md border-b border-slate-800/65 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.5)]'
+          ? 'bg-white/80 backdrop-blur-md border-b border-pink-100 py-3 shadow-[0_8px_32px_rgba(236,72,153,0.06)]'
           : 'bg-transparent py-5'
       }`}
     >
@@ -57,15 +58,15 @@ export default function Header({ activeSection }: HeaderProps) {
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="flex items-center gap-3 text-left group cursor-pointer"
         >
-          <div className="p-2 bg-gradient-to-tr from-blue-600 to-sky-400 rounded-lg group-hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-500/20">
-            <Layers className="w-5 h-5 text-slate-100 stroke-[2.2]" />
+          <div className="p-2 bg-gradient-to-tr from-pink-500 via-yellow-405 to-sky-450 rounded-lg group-hover:scale-110 transition-all duration-300 shadow-lg shadow-pink-500/25">
+            <span className="text-lg leading-none select-none">🦄</span>
           </div>
           <div>
-            <span className="font-sans font-extrabold tracking-widest text-slate-100 uppercase text-md block leading-tight">
-              Apex Agile
+            <span className="font-sans font-black tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-yellow-500 to-indigo-600 uppercase text-sm md:text-md block leading-tight">
+              Jaro Sidor Consulting
             </span>
-            <span className="font-mono text-[9px] tracking-[0.25em] text-sky-400 uppercase block">
-              Advisory Group
+            <span className="font-mono text-[9px] tracking-[0.25em] text-pink-500 font-bold uppercase block">
+              Fairy Dust Agility
             </span>
           </div>
         </button>
@@ -76,13 +77,13 @@ export default function Header({ activeSection }: HeaderProps) {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-sans text-xs font-semibold uppercase tracking-wider transition-colors duration-200 hover:text-sky-400 relative py-1 cursor-pointer ${
-                activeSection === item.id ? 'text-sky-400' : 'text-slate-300'
+              className={`font-sans text-xs font-bold uppercase tracking-wider transition-colors duration-200 hover:text-pink-600 relative py-1 cursor-pointer ${
+                activeSection === item.id ? 'text-pink-600' : 'text-slate-700'
               }`}
             >
               {item.label}
               {activeSection === item.id && (
-                <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-blue-500 rounded-full" />
+                <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-pink-500 rounded-full" />
               )}
             </button>
           ))}
@@ -92,17 +93,17 @@ export default function Header({ activeSection }: HeaderProps) {
         <div className="hidden md:block">
           <button
             onClick={() => scrollToSection('scheduler')}
-            className="flex items-center gap-2 font-sans text-xs font-bold uppercase tracking-widest bg-blue-600 hover:bg-blue-500 text-slate-50 px-5.5 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 active:scale-95 cursor-pointer border border-blue-400/25"
+            className="flex items-center gap-2 font-sans text-xs font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 hover:opacity-95 text-white px-5.5 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 active:scale-95 cursor-pointer"
           >
-            <Calendar className="w-3.5 h-3.5 text-blue-100" />
-            Book Advisory Briefing
+            <Calendar className="w-3.5 h-3.5 text-white" />
+            Book Advisory Briefing ☎️
           </button>
         </div>
 
         {/* Mobile menu toggle */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden p-2 text-slate-400 hover:text-slate-100 transition-colors cursor-pointer"
+          className="lg:hidden p-2 text-slate-700 hover:text-pink-600 transition-colors cursor-pointer"
           aria-label="Toggle Menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -111,16 +112,16 @@ export default function Header({ activeSection }: HeaderProps) {
 
       {/* Mobile Menu Panel */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950/98 border-b border-slate-800 absolute top-full left-0 right-0 py-6 px-6 shadow-2xl animate-fade-in backdrop-blur-xl">
+        <div className="lg:hidden bg-white/95 border-b border-pink-100 absolute top-full left-0 right-0 py-6 px-6 shadow-2xl animate-fade-in backdrop-blur-xl">
           <div className="flex flex-col gap-3">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-sans text-left text-sm font-bold uppercase tracking-wider py-2.5 cursor-pointer ${
+                className={`font-sans text-left text-sm font-extrabold uppercase tracking-wider py-2.5 cursor-pointer ${
                   activeSection === item.id 
-                    ? 'text-sky-400 border-l-2 border-sky-400 pl-3' 
-                    : 'text-slate-400 hover:text-slate-100 pl-3 border-l border-slate-900'
+                    ? 'text-pink-600 border-l-2 border-pink-500 pl-3' 
+                    : 'text-slate-650 hover:text-pink-600 pl-3 border-l border-pink-10'
                 }`}
               >
                 {item.label}
@@ -128,7 +129,7 @@ export default function Header({ activeSection }: HeaderProps) {
             ))}
             <button
               onClick={() => scrollToSection('scheduler')}
-              className="mt-4 flex items-center justify-center gap-2 font-sans font-bold uppercase tracking-widest bg-blue-600 text-slate-50 py-3.5 rounded-lg text-xs w-full cursor-pointer border border-blue-400/20"
+              className="mt-4 flex items-center justify-center gap-2 font-sans font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 text-white py-3.5 rounded-xl text-xs w-full cursor-pointer"
             >
               <Calendar className="w-4 h-4" />
               Book Advisory Briefing
