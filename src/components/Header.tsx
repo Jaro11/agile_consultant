@@ -72,12 +72,12 @@ export default function Header({ activeSection }: HeaderProps) {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-2.5 xl:gap-5">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`font-sans text-xs font-bold uppercase tracking-wider transition-colors duration-200 hover:text-pink-600 relative py-1 cursor-pointer ${
+              className={`font-sans text-[10px] xl:text-xs font-extrabold uppercase tracking-wider transition-colors duration-200 hover:text-pink-600 relative py-1 cursor-pointer whitespace-nowrap ${
                 activeSection === item.id ? 'text-pink-600' : 'text-slate-700'
               }`}
             >
@@ -90,12 +90,12 @@ export default function Header({ activeSection }: HeaderProps) {
         </nav>
 
         {/* CTA Button */}
-        <div className="hidden md:block">
+        <div className="hidden md:block flex-shrink-0">
           <button
             onClick={() => scrollToSection('scheduler')}
-            className="flex items-center gap-2 font-sans text-xs font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 hover:opacity-95 text-white px-5.5 py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 active:scale-95 cursor-pointer"
+            className="flex items-center gap-1.5 xl:gap-2 font-sans text-[10px] xl:text-xs font-black uppercase tracking-widest bg-gradient-to-r from-pink-500 via-yellow-405 to-indigo-600 hover:opacity-95 text-white px-3.5 py-2.5 xl:px-5.5 xl:py-3 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-pink-500/20 active:scale-95 cursor-pointer whitespace-nowrap"
           >
-            <Calendar className="w-3.5 h-3.5 text-white" />
+            <Calendar className="w-3 h-3 xl:w-3.5 xl:h-3.5 text-white" />
             Book Advisory Briefing ☎️
           </button>
         </div>
